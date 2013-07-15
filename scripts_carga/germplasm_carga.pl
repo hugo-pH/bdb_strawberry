@@ -38,8 +38,8 @@ my @gene_2_id = ();
 my @gene_3_id = ();
 my @scientist_id = ();
 my $ds = "DBI:mysql:proyecto_fresas:localhost";
-my $user_sql = "hugo";
-my $passwd = "532anion++";
+my $user_sql = "user";
+my $passwd = "password";
 my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
 
 my $sth_tax = $dbh->prepare("SELECT tax_id FROM taxonomy WHERE specie LIKE ?");
