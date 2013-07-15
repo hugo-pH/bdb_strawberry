@@ -10,8 +10,8 @@ my @name = ();
 my $line = ();
 my $format = 'csv';
 my $ds = "DBI:mysql:proyecto_fresas:localhost";
-my $user_sql = "hugo";
-my $passwd = "532anion++";
+my $user_sql = "user";
+my $passwd = "password";
 my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
 my $sth_name = $dbh->prepare("SELECT DISTINCT name FROM germplasm"); # this extract the name of the lines from the database. 
 $sth_name->execute();
