@@ -1,4 +1,0 @@
-linea	linea_control	quien toma los datos	fecha	peso	Color_valor_c	Color_valor_h	Color_valor_l	Color_valor_a	Color_valor_b	Instrumento de medida	largo	ancho	dureza	instrumento	s_solubles	instrumento
-line_id	control_id	scientist_id	date	value	c_value	h_value	l_value	a_value	b_value	assay_id	length_value	width_value	value	assay_id	value	assay_id
-control_bgal	control_bgal	candelapc@uma.es	2011-03-29	14,2	43,15	31,52	34,00	36,76	22,57	color estimation	45,2	25,3	400	fruit firmness	6	Soluble solids measurement
-control_bgal	control_bgal	candelapc@uma.es	2011-03-29	13	43,13	27,29	33,74	38,30	19,81	color estimation	46,3	25,63	480	fruit firmness	6	Soluble solids measurement
