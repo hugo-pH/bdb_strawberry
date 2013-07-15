@@ -1,3 +1,0 @@
-This directory stores the .sql files containing the sql code for the upload of the data. This files are created by the perl scripts found in /scripts_carga.
-
-There is a .sql file for each table and the data_field_carga.sql that contain the data of 5 tables (shape, fruit_weight, color, firmness and ss).
