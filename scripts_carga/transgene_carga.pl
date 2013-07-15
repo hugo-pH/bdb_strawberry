@@ -28,8 +28,8 @@ next;
 
 my @scientist_id = ();
 my $ds = "DBI:mysql:proyecto_fresas:localhost";
-my $user_sql = "hugo";
-my $passwd = "532anion++";
+my $user_sql = "user";
+my $passwd = "password";
 my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
 my $sth_scient = $dbh->prepare("SELECT scientist_id FROM scientist WHERE mail LIKE ?");
 $sth_scient->execute ($scient);
