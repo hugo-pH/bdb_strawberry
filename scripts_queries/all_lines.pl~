@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+#retrieving.pl
+#This script retrieve the data for each table and for each gene and create a file cointaining this data named by the table name and the line name.
+use DBI;
+use DBD::mysql;
+use strict;
+use DBIx::Dump;
+
+my @data = ();
+my @name = ("29bp", "apel", "bgali", "bgal", "bp", "apae", "pg ", "pgap");
+my $line = ();
+my $id = ();
+my $value = ();
+my $format = 'csv';
+my $filename = 'dbxi.csv';
+my $sth_data = ();
+my $ds = "DBI:mysql:proyecto_fresas:localhost";
+my $user_sql = "hugo";
+my $passwd = "532anion++";
+my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
+
+foreach $line (@name){
+	my $sth_firm = $dbh->prepare("SELECT name, firmness.value FROM firmness JOIN 		germplasm ON germplasm.line_id = firmness.line_id WHERE germplasm.name LIKE '$line%'");
+	$sth_firm->execute($line);
+	my $file_firm = "firmness_$line_all.csv";
+	my $out_firm = DBIx::Dump->new();
+	$out_firm->dump('format' => 'csv', 'output' => $file_firm, 'sth' => $sth_firm);
+}	
+
+$dbh->disconnect;

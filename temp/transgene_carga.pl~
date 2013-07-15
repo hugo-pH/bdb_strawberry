@@ -1,0 +1,47 @@
+#!/usr/bin/perl -w
+#transgene_subida.pl
+use DBI;
+use DBD::mysql;
+use strict;
+
+my @keys = ();
+while (my $line = <>) {
+    chomp $line;
+
+    if ($line =~ /^gene_id/)  {
+	@keys = split (" ", $line);
+	
+next;
+}
+
+    my @data = split ("\t", $line);
+
+   
+    my $keys = join (", ",@keys);
+    my $sequence = $data[1];#separo los datos tomados en @data en cada uno de los campos de la tabla. 
+    my $modif = $data[2];
+    my $symbol = $data[3];
+    my $EC = $data[4];
+    my $scient = $data[5];
+#    $modif =~ s/_/ /g;#esto le quita las _ a cada una de las variables.
+#    $symbol =~ s/_/ /g;
+#    $gene =~ s/_/ /g;
+#    $scientist =~ s/_/ /g;
+#    $date =~ s/_/ /g;;
+  
+ 
+
+my @scientist_id = ();
+my $ds = "DBI:mysql:proyecto_fresas:localhost";
+my $user_sql = "hugo";
+my $passwd = "532anion++";
+my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
+my $sth_scient = $dbh->prepare("SELECT scientist_id FROM scientist WHERE mail LIKE ?");
+$sth_scient->execute ($scient);
+@scientist_id = $sth_scient->fetchrow_array;
+   
+ print "INSERT INTO germplasm ($keys) VALUES ('$data[0]', '$sequence', '$modif', '$symbol', '$EC', '@scientist_id');\n";
+}
+
+
+

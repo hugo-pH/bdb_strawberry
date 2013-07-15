@@ -1,0 +1,5 @@
+This directory contain the raw data. There is a .csv file with the data for each table and a .ods file with all the data together.
+
+The field_data.csv contain the data of the template created for the storage of the data obtained in the greenhouse, that is, values of color, shape, soluble solids, firmness and fruit weight.
+In this way the data which belongs to 5 table are stored in only one file that can be processed by a perl script which separte the information for each table. 
+ 

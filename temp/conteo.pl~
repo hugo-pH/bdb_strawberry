@@ -1,0 +1,11 @@
+#!/bin/usr/perl
+#conteo.pl
+
+$bp_1 = "bp_1";
+$conteo = ();
+while (my $line = < >){
+    chomp $line;
+
+    if ($line eq $bp_1){
+	$conteo++;}
+}

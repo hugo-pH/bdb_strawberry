@@ -1,0 +1,6 @@
+In this directory are contained the scripts for the retrieving of data.
+- 'values_from_genes.pl' retrieve the data from the color, shape, weight, firmness and soluble solids tables. It creates a file containing this values from each transgenic line, that means from each gene (or genes) introduced (29bp, bp, apel...).
+
+- 'values_from_lines.pl' also retrieve the data from the color, shape, weight, firmness and soluble solids tables but it creates a file containing the data of a unique line (29bp 11, pgap 58...).
+
+

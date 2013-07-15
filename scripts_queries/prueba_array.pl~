@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+use DBI;
+use DBD::mysql;
+use strict;
+use DBIx::Dump;
+
+my @a = ("29bp 11", "pg 29", "apel 34");
+my $line = ();
+foreach $line (@a){
+
+    $line =~ s/\d/\s/;
+    print "$line\n";}

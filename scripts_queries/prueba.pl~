@@ -1,0 +1,35 @@
+#!/usr/bin/perl -w
+#retrieving.pl
+
+use DBI;
+use DBD::mysql;
+use strict;
+use DBIx::Dump;
+use List::MoreUtils qw(uniq);
+
+my @name = ();
+my $line = ();
+my @unique_name = ();
+my %hash = ();
+my $format = 'csv';
+my $ds = "DBI:mysql:proyecto_fresas:localhost";
+my $user_sql = "hugo";
+my $passwd = "532anion++";
+my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
+my $sth_name = $dbh->prepare("SELECT DISTINCT name FROM germplasm"); # this extract the name of the lines from the database. 
+$sth_name->execute();
+while (@name = $sth_name->fetchrow_array){
+    foreach $line (@name){
+ $line =~ s/ \d+/ /;
+ $line =~ s/ \w\d+/ /;
+print "@name\n";
+}
+
+@unique_name = grep { ! $hash{ $_ }++} @name;
+
+
+
+ 
+print "@unique_name\n";
+
+}

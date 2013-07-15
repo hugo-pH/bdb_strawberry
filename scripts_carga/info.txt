@@ -1,0 +1,2 @@
+This directory stores the perl scripts for the upload of the .csv files found in the /data directory, that is, the upload of the raw data. 
+There is a .pl file for each table and the data_field_carga.pl that process the template data_field.csv found in /data and write the sql code for the upload of this data to his corresponding table. 

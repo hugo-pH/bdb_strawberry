@@ -1,0 +1,68 @@
+line_id	name	tax_line_id	transgene_id	transgene_2_id	transgene_3_id	scientist_id_germ	date_creation
+	29bp_11	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_13	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_14	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_15	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_16	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_18	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_2	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_4	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_5	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_6	Fragaria x ananassa	FaPG2	FaPG1			
+	29bp_9	Fragaria x ananassa	FaPG2	FaPG1			
+	apel_14	Fragaria x ananassa	pelC				
+	apel_21	Fragaria x ananassa	pelC				
+	apel_23	Fragaria x ananassa	pelC				
+	apel_39	Fragaria x ananassa	pelC				
+	bgali_22	Fragaria x ananassa	FaB-gal4				
+	bgal_24	Fragaria x ananassa	FaB-gal4				
+	bgal_27	Fragaria x ananassa	FaB-gal4				
+	bgal_28 	Fragaria x ananassa	FaB-gal4				
+	bgal_37	Fragaria x ananassa	FaB-gal4				
+	bgal_A15	Fragaria x ananassa	FaB-gal4				
+	bgal_A18	Fragaria x ananassa	FaB-gal4				
+	bgal_A19	Fragaria x ananassa	FaB-gal4				
+	bgal_A21	Fragaria x ananassa	FaB-gal4				
+	bgal_A24	Fragaria x ananassa	FaB-gal4				
+	bgal_A25	Fragaria x ananassa	FaB-gal4				
+	bgal_A27	Fragaria x ananassa	FaB-gal4				
+	bgal_A28	Fragaria x ananassa	FaB-gal4				
+	bgal_A37	Fragaria x ananassa	FaB-gal4				
+	bgali_12	Fragaria x ananassa	FaB-gal4				
+	bgali_13	Fragaria x ananassa	FaB-gal4				
+	bgali_2	Fragaria x ananassa	FaB-gal4				
+	bp_1	Fragaria x ananassa	FaPG2				
+	bp_10	Fragaria x ananassa	FaPG2				
+	bp_13	Fragaria x ananassa	FaPG2				
+	bp_14	Fragaria x ananassa	FaPG2				
+	bp_16	Fragaria x ananassa	FaPG2				
+	bp_19	Fragaria x ananassa	FaPG2				
+	bp_2	Fragaria x ananassa	FaPG2				
+	bp_3	Fragaria x ananassa	FaPG2				
+	bp_4	Fragaria x ananassa	FaPG2				
+	bp_5	Fragaria x ananassa	FaPG2				
+	bp_7	Fragaria x ananassa	FaPG2				
+	bp_8	Fragaria x ananassa	FaPG2				
+	bp_9	Fragaria x ananassa	FaPG2				
+	control_2012	Fragaria x ananassa					
+	control_29bp	Fragaria x ananassa					
+	control_apel	Fragaria x ananassa					
+	control_bgal	Fragaria x ananassa					
+	control_pg	Fragaria x ananassa					
+	control_pgap	Fragaria x ananassa					
+	apae_1	Fragaria x ananassa	pae				
+	apae_13	Fragaria x ananassa	pae				
+	apae_3	Fragaria x ananassa	pae				
+	apae_4	Fragaria x ananassa	pae				
+	apae_6	Fragaria x ananassa	pae				
+	pg_29	Fragaria x ananassa	FaPG1				
+	pg_62	Fragaria x ananassa	FaPG1				
+	pgap_13	Fragaria x ananassa	FaPG1	pelC			
+	pgap_22	Fragaria x ananassa	FaPG1	pelC			
+	pgap_33	Fragaria x ananassa	FaPG1	pelC			
+	pgap_35	Fragaria x ananassa	FaPG1	pelC			
+	pgap_36	Fragaria x ananassa	FaPG1	pelC			
+	pgap_39	Fragaria x ananassa	FaPG1	pelC			
+	pgap_4	Fragaria x ananassa	FaPG1	pelC			
+	pgap_48	Fragaria x ananassa	FaPG1	pelC			
+	pgap_58	Fragaria x ananassa	FaPG1	pelC			

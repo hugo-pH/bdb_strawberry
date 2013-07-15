@@ -1,0 +1,14 @@
+Directory of the biological database for the management of a plants genetically modified colection project.  
+
+Directories:
+
+- /data stores the raw data. There is a .csv file containing the data for each table and a .ods file with all the data together. 
+- /retrievied_data store the data retrievied from the database. 
+- /scripts_carga stores the perl scripts for the upload of the .csv files found in the /data directory, that is, the upload of the raw data. 
+- /scripts_db stores perl's scripts that write .sql files needed in the creation of the database structure. 
+- /sql_data stores .sql files containing the sql code for the upload of the data. This files are created by the perl scripts found in /scripts_carga.
+- scripts_queries stores .pl files for quering the database.  
+- /sql_design stores .sql files needed for the creation of the database. This files are created by the perl scripts found in /scripts_db.
+- /temp is a directory used in some temporary operations and tests. 
+
+

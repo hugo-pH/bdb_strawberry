@@ -1,0 +1,17 @@
+    DROP TABLE IF EXISTS genes;
+    CREATE TABLE genes(
+	genes_id INT NOT NULL AUTO_INCREMENT,
+	gene_1 VARCHAR(100),
+	gene_2 VARCHAR (100),
+	gene_3 VARCHAR (100),
+	PRIMARY KEY (genes_id),
+	FOREIGN KEY (gene_1)
+	 REFERENCES transgene(gene_id),
+	FOREIGN KEY (gene_2)
+	 REFERENCES transgene(gene_id),
+	FOREIGN KEY (gene_3)
+	 REFERENCES transgene(gene_id),	
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	) ENGINE=InnoDB;
+	

@@ -1,0 +1,29 @@
+#!/usr/bin/perl -w
+#values_from_genes.pl
+#This script retrieve the data for each table and for each gene and create a file cointaining this data named by the table name and the line name.
+use DBI;
+use DBD::mysql;
+use strict;
+use DBIx::Dump;
+
+my @unique_name = ();
+my %hash = ();
+my @name = (); # this is an array containing the name of the lines.
+my $line = ();#this scalar will be used to pick the values of the @name array.
+my $format = 'csv';
+my $ds = "DBI:mysql:proyecto_fresas:localhost"; #database connection.
+my $user_sql = "hugo";
+my $passwd = "532anion++";
+my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
+my $sth_name = $dbh->prepare("SELECT DISTINCT name FROM germplasm"); # this extract the name of the lines from the database. 
+$sth_name->execute();
+while (@name = $sth_name->fetchrow_array){ # this loop process the name of the line to remove the numbers. 
+    foreach $line (@name){
+	unless ($line=~/control/){
+       	$line =~ s/ \d+//;#remove the numbers after the blank space.
+	 $line =~ s/ \w\d+//;#remove the characters and numbers after the blank space.
+	chomp $line;
+print "$line\n";
+}
+}
+  

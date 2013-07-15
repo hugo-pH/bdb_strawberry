@@ -1,0 +1,2 @@
+This directory contain the perl scripts that write the .sql files needed in the creation of the database structure. 
+There is a file for each table and in adittion there is a file that containg the code for all the table together (todo.pl).

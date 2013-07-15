@@ -1,0 +1,37 @@
+#!/usr/bin/perl -w
+#retrieving.pl
+use DBI;
+use DBD::mysql;
+use strict;
+use DBIx::Dump;
+
+my @data = ();
+my @name = ();
+my $line = ();
+my $id = ();
+my $value = ();
+my $format = 'csv';
+my $filename = 'dbxi.csv';
+my $sth_data = ();
+my $ds = "DBI:mysql:proyecto_fresas:localhost";
+my $user_sql = "hugo";
+my $passwd = "532anion++";
+my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
+my $sth_name = $dbh->prepare("SELECT DISTINCT name FROM germplasm"); 
+$sth_name->execute();
+while (@name = $sth_name->fetchrow_array){
+
+foreach $line (@name){
+$sth_data = $dbh->prepare("SELECT firmness.value FROM firmness JOIN germplasm ON germplasm.line_id = firmness.line_id WHERE germplasm.name LIKE ?");
+$sth_data->execute($line);
+
+my $out = DBIx::Dump->new();
+
+$out->dump('format' => 'csv', 'output' => '$line.csv', 'sth' => $sth_data);
+
+}
+
+}
+
+
+

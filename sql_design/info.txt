@@ -1,0 +1,4 @@
+This directory stores the .sql files needed for the creation of the database. This files are created by the perl scripts found in /scripts_db.
+There is a .sql file for each table and in adittion the todo_final.sql contain all the sql code necessary for creation of the database structure, that is, this file contain all the code present in the other files.
+It also stored here a .sh file which merge the code for each table in the todo_final.sql file. 
+
